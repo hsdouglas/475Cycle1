@@ -1,0 +1,39 @@
+<h1>Listing open_shifts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Set shift</th>
+      <th>Original assignee</th>
+      <th>Opened</th>
+      <th>Is trade?</th>
+      <th>Is request?</th>
+      <th>Is cover?</th>
+      <th>Active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @open_shifts.each do |open_shift| %>
+      <tr>
+        <td><%= open_shift.set_shift_id %></td>
+        <td><%= open_shift.original_assignee_id %></td>
+        <td><%= open_shift.opened %></td>
+        <td><%= open_shift.is_trade? %></td>
+        <td><%= open_shift.is_request? %></td>
+        <td><%= open_shift.is_cover? %></td>
+        <td><%= open_shift.active %></td>
+        <td><%= link_to 'Show', open_shift %></td>
+        <td><%= link_to 'Edit', edit_open_shift_path(open_shift) %></td>
+        <td><%= link_to 'Destroy', open_shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Open shift', new_open_shift_path %>

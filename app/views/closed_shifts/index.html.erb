@@ -1,0 +1,31 @@
+<h1>Listing closed_shifts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Open shift</th>
+      <th>New assignee</th>
+      <th>Claimed</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @closed_shifts.each do |closed_shift| %>
+      <tr>
+        <td><%= closed_shift.open_shift_id %></td>
+        <td><%= closed_shift.new_assignee_id %></td>
+        <td><%= closed_shift.claimed %></td>
+        <td><%= link_to 'Show', closed_shift %></td>
+        <td><%= link_to 'Edit', edit_closed_shift_path(closed_shift) %></td>
+        <td><%= link_to 'Destroy', closed_shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Closed shift', new_closed_shift_path %>

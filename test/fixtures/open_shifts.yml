@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  set_shift_id: 1
+  original_assignee_id: 1
+  opened: 2015-09-13 12:48:48
+  is_trade?: false
+  is_request?: false
+  is_cover?: false
+  active: false
+
+two:
+  set_shift_id: 1
+  original_assignee_id: 1
+  opened: 2015-09-13 12:48:48
+  is_trade?: false
+  is_request?: false
+  is_cover?: false
+  active: false

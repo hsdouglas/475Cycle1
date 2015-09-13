@@ -1,0 +1,45 @@
+<%= form_for(@open_shift) do |f| %>
+  <% if @open_shift.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@open_shift.errors.count, "error") %> prohibited this open_shift from being saved:</h2>
+
+      <ul>
+      <% @open_shift.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :set_shift_id %><br>
+    <%= f.number_field :set_shift_id %>
+  </div>
+  <div class="field">
+    <%= f.label :original_assignee_id %><br>
+    <%= f.number_field :original_assignee_id %>
+  </div>
+  <div class="field">
+    <%= f.label :opened %><br>
+    <%= f.datetime_select :opened %>
+  </div>
+  <div class="field">
+    <%= f.label :is_trade? %><br>
+    <%= f.check_box :is_trade? %>
+  </div>
+  <div class="field">
+    <%= f.label :is_request? %><br>
+    <%= f.check_box :is_request? %>
+  </div>
+  <div class="field">
+    <%= f.label :is_cover? %><br>
+    <%= f.check_box :is_cover? %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

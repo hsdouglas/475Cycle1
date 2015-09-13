@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Open shift:</strong>
+  <%= @closed_shift.open_shift_id %>
+</p>
+
+<p>
+  <strong>New assignee:</strong>
+  <%= @closed_shift.new_assignee_id %>
+</p>
+
+<p>
+  <strong>Claimed:</strong>
+  <%= @closed_shift.claimed %>
+</p>
+
+<%= link_to 'Edit', edit_closed_shift_path(@closed_shift) %> |
+<%= link_to 'Back', closed_shifts_path %>

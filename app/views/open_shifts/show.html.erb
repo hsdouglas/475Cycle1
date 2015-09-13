@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Set shift:</strong>
+  <%= @open_shift.set_shift_id %>
+</p>
+
+<p>
+  <strong>Original assignee:</strong>
+  <%= @open_shift.original_assignee_id %>
+</p>
+
+<p>
+  <strong>Opened:</strong>
+  <%= @open_shift.opened %>
+</p>
+
+<p>
+  <strong>Is trade?:</strong>
+  <%= @open_shift.is_trade? %>
+</p>
+
+<p>
+  <strong>Is request?:</strong>
+  <%= @open_shift.is_request? %>
+</p>
+
+<p>
+  <strong>Is cover?:</strong>
+  <%= @open_shift.is_cover? %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @open_shift.active %>
+</p>
+
+<%= link_to 'Edit', edit_open_shift_path(@open_shift) %> |
+<%= link_to 'Back', open_shifts_path %>

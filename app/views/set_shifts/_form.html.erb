@@ -1,0 +1,37 @@
+<%= form_for(@set_shift) do |f| %>
+  <% if @set_shift.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@set_shift.errors.count, "error") %> prohibited this set_shift from being saved:</h2>
+
+      <ul>
+      <% @set_shift.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :assignee_id %><br>
+    <%= f.number_field :assignee_id %>
+  </div>
+  <div class="field">
+    <%= f.label :assigner_id %><br>
+    <%= f.number_field :assigner_id %>
+  </div>
+  <div class="field">
+    <%= f.label :start %><br>
+    <%= f.datetime_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br>
+    <%= f.datetime_select :end %>
+  </div>
+  <div class="field">
+    <%= f.label :is_PTO? %><br>
+    <%= f.check_box :is_PTO? %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

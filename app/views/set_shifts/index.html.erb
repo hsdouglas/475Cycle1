@@ -1,0 +1,35 @@
+<h1>Listing set_shifts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assignee</th>
+      <th>Assigner</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Is pto?</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @set_shifts.each do |set_shift| %>
+      <tr>
+        <td><%= set_shift.assignee_id %></td>
+        <td><%= set_shift.assigner_id %></td>
+        <td><%= set_shift.start %></td>
+        <td><%= set_shift.end %></td>
+        <td><%= set_shift.is_PTO? %></td>
+        <td><%= link_to 'Show', set_shift %></td>
+        <td><%= link_to 'Edit', edit_set_shift_path(set_shift) %></td>
+        <td><%= link_to 'Destroy', set_shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Set shift', new_set_shift_path %>

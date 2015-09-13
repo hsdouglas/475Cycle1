@@ -1,0 +1,29 @@
+<%= form_for(@closed_shift) do |f| %>
+  <% if @closed_shift.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@closed_shift.errors.count, "error") %> prohibited this closed_shift from being saved:</h2>
+
+      <ul>
+      <% @closed_shift.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :open_shift_id %><br>
+    <%= f.number_field :open_shift_id %>
+  </div>
+  <div class="field">
+    <%= f.label :new_assignee_id %><br>
+    <%= f.number_field :new_assignee_id %>
+  </div>
+  <div class="field">
+    <%= f.label :claimed %><br>
+    <%= f.datetime_select :claimed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

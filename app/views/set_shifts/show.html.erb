@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Assignee:</strong>
+  <%= @set_shift.assignee_id %>
+</p>
+
+<p>
+  <strong>Assigner:</strong>
+  <%= @set_shift.assigner_id %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @set_shift.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @set_shift.end %>
+</p>
+
+<p>
+  <strong>Is pto?:</strong>
+  <%= @set_shift.is_PTO? %>
+</p>
+
+<%= link_to 'Edit', edit_set_shift_path(@set_shift) %> |
+<%= link_to 'Back', set_shifts_path %>

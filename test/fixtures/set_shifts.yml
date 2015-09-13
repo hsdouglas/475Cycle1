@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assignee_id: 1
+  assigner_id: 1
+  start: 2015-09-13 12:43:43
+  end: 2015-09-13 12:43:43
+  is_PTO?: false
+
+two:
+  assignee_id: 1
+  assigner_id: 1
+  start: 2015-09-13 12:43:43
+  end: 2015-09-13 12:43:43
+  is_PTO?: false
